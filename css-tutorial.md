@@ -861,3 +861,136 @@ font-weight: bold;
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้า</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>🛍️ สินค้า</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/product1.jpg" alt="เสื้อเชิ้ต">
+                    <h3>เสื้อเชิ้ต</h3>
+                    <p>฿350</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/product2.jpg" alt="กางเกงยีนส์">
+                    <h3>กางเกงยีนส์</h3>
+                    <p>฿799</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/product3.jpg" alt="รองเท้าผ้าใบ">
+                    <h3>รองเท้าผ้าใบ</h3>
+                    <p>฿1,250</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/product4.jpg" alt="กระเป๋าเป้">
+                    <h3>กระเป๋าเป้</h3>
+                    <p>฿899</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/product5.jpg" alt="นาฬิกาข้อมือ">
+                    <h3>นาฬิกาข้อมือ</h3>
+                    <p>฿1,500</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/product6.jpg" alt="หูฟังไร้สาย">
+                    <h3>หูฟังไร้สาย</h3>
+                    <p>฿990</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+/* ----- General Styles ----- */
+body {
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ----- Dashboard Layout ----- */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* ----- Header ----- */
+.header {
+    background: #2980b9;
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- Main Content ----- */
+.main-content {
+    width: 90%;
+    text-align: center;
+}
+
+/* ----- Product Grid ----- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ----- Product Card (เล็กลง) ----- */
+.product-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.product-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 0.8rem 0 0.3rem;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-card p {
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+
